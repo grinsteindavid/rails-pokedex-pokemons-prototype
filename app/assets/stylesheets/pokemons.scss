@@ -1,0 +1,36 @@
+// Place all the styles related to the pokemons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.title {
+  font-size: 3.6rem;
+  margin-bottom: 1em;
+  word-wrap: break-word; // avoid the text to be off the container
+}
+.create-pokemon {
+  margin-bottom: 1em;
+}
+.pokemon-table {
+  box-shadow: 1px 1px 15px #252525;
+  background-color: #EAE8E8;
+}
+.pokemon-input {
+  margin-bottom: 2em;
+  height: 3em;
+}
+h1.show-pokemon-hp {
+  color: #57AE67;
+}
+nav.navbar {
+  background-color: #E13939;
+  margin-bottom: 0;
+  box-shadow: 1px 1px 10px #383838;
+  border: 0;
+}
+.pokemon-result-link {
+  font-size: 2em;
+  color: #E5E5E5;
+}
+.pokemon-upload-picture {
+  margin-bottom: 1em;
+}

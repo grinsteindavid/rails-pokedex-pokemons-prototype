@@ -1,0 +1,6 @@
+<%= form_for [@user, @pokemon], multipart: false do |f| %>
+  <%= f.text_field :name, class: "form-control pokemon-input text-center", placeholder: "Pokemon name", required: true %>
+  <%= f.number_field :hp, class: "form-control pokemon-input text-center", placeholder: "Pokemon HP", required: true %>
+  <%= f.file_field :image, class: "form-control btn btn-primary pokemon-upload-picture", accept: "image/jpg,image/jpeg,image/png,image/gif", required: true %>
+  <%= f.submit "#{submit_text}", class: "btn btn-success", style: "margin-bottom: 1em" %>
+<% end %>

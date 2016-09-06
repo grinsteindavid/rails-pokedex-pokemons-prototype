@@ -1,0 +1,3 @@
+<%= @user.username.capitalize %> have a new pokemon: <%= @pokemon.name.capitalize %> in its Pokedex app.
+Check the new pokemon here:
+<%= "https://davmir-pokedex.herokuapp.com/users/#{@user.id}/pokemons/#{@pokemon.id}" %>

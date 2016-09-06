@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
+
+    <% if flash[:errors] %>
+      <div class="" style="margin-top: 2em">
+        <% flash[:errors].each do |error| %>
+          <h4 class="text-center"><%= error %></h4>
+        <% end %>
+      </div>
+    <% end %>
+
+    <h1 class="title text-center">Signup</h1>
+    <%= form_for :user, url: '/signup', style: 'margin-top: 1em' do |f| %>
+      <%= f.email_field :email, class: "form-control pokemon-input text-center", placeholder: "Email", required: true %>
+      <%= f.text_field :username, class: "form-control pokemon-input text-center", placeholder: "Username", required: true %>
+      <%= f.password_field :password, class: "form-control pokemon-input text-center", placeholder: "Password", required: true %>
+      <%= f.submit "Submit", class: "btn btn-success", style: "margin-bottom: 1em" %>
+    <% end %>
+
+  </div>
+</div>

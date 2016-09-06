@@ -1,0 +1,6 @@
+<div class="container">
+  <div class="text-center">
+    <h1>You have a new pokemon: <%= @pokemon.name.capitalize %> in your Pokedex app</h1>
+    <%= link_to "Check your new pokemon", "https://davmir-pokedex.herokuapp.com/users/#{@user.id}/pokemons/#{@pokemon.id}" %>
+  </div>
+</div>

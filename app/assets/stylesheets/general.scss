@@ -1,0 +1,26 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-color: #EB3C3C
+}
+/* POKEDEX MENU */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #FD5757;
+}
+.navbar-default .navbar-toggle {
+  background-color: #E63838;
+  border: 0;
+}
+.navbar-default .navbar-toggle:hover {
+  background-color: #D73434;
+  border: 0;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: #333333;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border: none;
+}

@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+
+    <h1 class="title text-center">Pokedex</h1>
+    <%= link_to "Create Pokemon", "/users/#{@user.id}/pokemons/new", class: "create-pokemon btn btn-primary" %>
+
+    <table class="table table-bordered table-hover text-left pokemon-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if @pokemons %>
+          <% @pokemons.each do |pokemon| %>
+            <tr>
+              <td>
+                <%= image_tag pokemon.image.thumb.url, class: "img-thumbnail" %>
+                <%= pokemon.name.capitalize %>
+              </td>
+              <td class="text-center">
+                <%= link_to "show", "/users/#{@user.id}/pokemons/#{pokemon.id}", class: "btn btn-sm btn-info" %>
+                <%= link_to "edit", "/users/#{@user.id}/pokemons/#{pokemon.id}/edit", class: "btn btn-sm btn-warning" %>
+                <%= link_to "delete", "/users/#{@user.id}/pokemons/#{pokemon.id}", data: {confirm: "Do you confirm this action?"}, method: "delete", class: "btn btn-sm btn-danger" %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
